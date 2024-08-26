@@ -2,3 +2,45 @@ aws-java-sdk-bundle-1.12.276.jar      -- 269.6 MiB (282,726,807 bytes)
 bcpkix-jdk18on-1.78.jar               -- 1.1 MiB (1,123,385 bytes)
 bcprov-jdk18on-1.78.jar               -- 7.9 MiB (8,324,427 bytes)
 hadoop-aws-3.3.4.jar                  -- 940.1 KiB (962,685 bytes)
+
+
+docker rmi -f $(docker images -f "dangling=true" -q)
+
+/opt/bitnami/spark/jars/
+
+(base) jovyan@7015681b2979:/usr/local/spark-3.5.0-bin-hadoop3/jars$ pwd
+/usr/local/spark-3.5.0-bin-hadoop3/jars
+docker exec -it 938ad8224ff0 /bin/bash
+
+
+
+
+
+
+docker-compose up --scale spark-worker=2
+docker cp taxi.csv 938ad8224ff0:/opt/file/taxi.csv
+docker cp taxi.csv ade59c27209e:/opt/file/taxi.csv
+docker cp taxi.csv 7015681b2979:/opt/file/taxi.csv
+docker cp aws-java-sdk-bundle-1.12.276.jar 938ad8224ff0://opt/bitnami/spark/jars/aws-java-sdk-bundle-1.12.276.jar
+docker cp aws-java-sdk-bundle-1.12.276.jar ade59c27209e://opt/bitnami/spark/jars/aws-java-sdk-bundle-1.12.276.jar
+docker cp aws-java-sdk-bundle-1.12.276.jar ade59c27209e:/usr/local/spark/jars/aws-java-sdk-bundle-1.12.276.jar
+docker cp aws-java-sdk-bundle-1.12.276.jar 7015681b2979:/usr/local/spark/jars/
+docker cp hadoop-aws-3.3.4.jar 7015681b2979:/usr/local/spark/jars/hadoop-aws-3.3.4.jar
+docker cp bcpkix-jdk18on-1.78.jar 7015681b2979:/usr/local/spark/jars/bcpkix-jdk18on-1.78.jar
+docker cp bcpkix-jdk18on-1.78.jar 938ad8224ff0:/usr/local/spark/jars/bcpkix-jdk18on-1.78.jar
+docker cp bcprov-jdk18on-1.78.jar 7015681b2979:/usr/local/spark/jars/bcprov-jdk18on-1.78.jar
+docker cp bcprov-jdk18on-1.78.jar ade59c27209e:/usr/local/spark/jars/bcprov-jdk18on-1.78.jar
+docker cp bcpkix-jdk18on-1.78.jar 938ad8224ff0:/opt/bitnami/spark/jars/bcpkix-jdk18on-1.78.jar
+docker cp bcprov-jdk18on-1.78.jar 938ad8224ff0:/opt/bitnami/spark/jars/bcprov-jdk18on-1.78.jar
+docker cp bcprov-jdk18on-1.78.jar ade59c27209e:/opt/bitnami/spark/jars/bcprov-jdk18on-1.78.jar
+docker cp bcpkix-jdk18on-1.78.jar ade59c27209e:/opt/bitnami/spark/jars/bcpkix-jdk18on-1.78.jar
+
+
+
+
+
+
+
+
+
+
