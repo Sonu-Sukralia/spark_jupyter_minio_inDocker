@@ -1,0 +1,17 @@
+
+spark/172.19.0.3:7077
+helm upgrade --install spark-release bitnami-repo/spark --namespace default -f vspark1.yaml
+
+
+docker exec -it 7015681b2979 /bin/bash
+
+docker exec -it 938ad8224ff0 /bin/bash
+docker exec -it ade59c27209e /bin/bash
+docker exec -it -u root 7015681b2979 /bin/bas
+http://localhost:8100/access-keys
+
+
+
+docker cp taxi.csv 7015681b2979:/opt/file/taxi.csv
+docker cp taxi.csv jupyter:/opt/file/taxi.csv
+docker-compose up --scale spark-worker=2
