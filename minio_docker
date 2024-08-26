@@ -1,0 +1,38 @@
+Docerk
+docker pull bitnami/minio
+
+docker run bitnami/minio
+docker run --hostname minio bitnami/minio
+docker network ls
+docker network inspect minio_spark-network
+docker run --hostname minio --network minio_spark_network bitnami/minio
+docker run --hostname minio -d  --network minio_spark-network bitnami/minio
+dockeer ps -a
+docker stop jolly_blackwell
+docker run --hostname minio -d --name minio  --network minio_spark-network bitnami/minio
+docker stop minio
+docker run --hostname minio -d --name minio  --network minio_spark-network bitnami/minio
+docker rm minio
+docker run --hostname minio -d --name minio -p 8099:9000 -p 8100:9001  --network minio_spark-network bitnami/minio
+docker logs minio
+
+
+docker run --hostname minio -d --name minio -p 8099:9000 -p 8100:9001 -e MINIO_ROOT_USER=minio -e MINIO_ROOT_PASSWORD=minio123 --network minio_spark-network bitnami/minio
+  -- http://localhost:8100
+
+docker exec -it minio bash
+ -- I have no name!@minio:/opt/bitnami/minio-client$ cat /etc/hosts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
